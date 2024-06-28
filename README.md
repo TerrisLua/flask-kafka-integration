@@ -13,7 +13,6 @@ This project demonstrates a real-time event tracking system using Kafka, Flask, 
 - PostgreSQL
 
 ## Set Up Python Virtual Environment
-```bash
 python -m venv venv
 source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
 
@@ -39,3 +38,6 @@ Create tables button_clicks and page_views using the schema provided in the appl
 - **templates/: Contains the HTML templates for the web interface.
 - **static/: Contains static files such as CSS and JavaScript.
 - **requirements.txt: List of Python dependencies.
+
+
+
