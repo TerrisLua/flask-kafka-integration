@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Tracking</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script>
+        function sendEvent(eventType, data) {
+            fetch('/send_event', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ event_type: eventType, ...data })
+            })
+            .then(response => response.json())
+            .then(data => console.log('Event sent:', data))
+            .catch(error => console.error('Error:', error));
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Track button clicks
+            document.getElementById('clickButton').addEventListener('click', function() {
+                sendEvent('click', { action: 'button_click' });
+            });
+
+            // Track page views
+            sendEvent('page_view', { action: 'page_view' });
+        });
+    </script>
+</head>
+<body>
+    <h1>Event Tracking</h1>
+    <button id="clickButton">Click Me</button>
+    <br><br>
+    <a href="/display">Go to Display Page</a>
+</body>
+</html>

@@ -1,0 +1,7 @@
+flask
+kafka-python
+pyspark
+psycopg2
+flask
+sqlalchemy
+python-dotenv
