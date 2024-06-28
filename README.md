@@ -33,10 +33,10 @@ Create a database named kafka_events.
 Create tables button_clicks and page_views using the schema provided in the application.
 
 ## Project Structure
-- **app.py: The Flask application.
-- **consumer.py: The Kafka consumer that processes events and stores them in PostgreSQL.
-- **templates/: Contains the HTML templates for the web interface.
-- **static/: Contains static files such as CSS and JavaScript.
+- **app.py**: The Flask application.
+- **consumer.py**: The Kafka consumer that processes events and stores them in PostgreSQL.
+- **templates/**: Contains the HTML templates for the web interface.
+- **static/**: Contains static files such as CSS and JavaScript.
 - **requirements.txt: List of Python dependencies.
 
 
