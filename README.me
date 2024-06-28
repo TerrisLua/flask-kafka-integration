@@ -17,23 +17,23 @@ This project demonstrates a real-time event tracking system using Kafka, Flask, 
 python -m venv venv
 source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
 
-##Install Dependencies
+## Install Dependencies
 pip install -r requirements.txt
 
-##Start Zookeeper
+## Start Zookeeper
 bin/zookeeper-server-start.sh config/zookeeper.properties
-##Start Kafka
+## Start Kafka
 bin/kafka-server-start.sh config/server.properties
 
-##Create Kafka Topics
+## Create Kafka Topics
 bin/kafka-topics.sh --create --topic button_clicks --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
 bin/kafka-topics.sh --create --topic page_views --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
 
-##Set Up PostgreSQL Database
+## Set Up PostgreSQL Database
 Create a database named kafka_events.
 Create tables button_clicks and page_views using the schema provided in the application.
 
-##Project Structure
+## Project Structure
 - **app.py: The Flask application.
 - **consumer.py: The Kafka consumer that processes events and stores them in PostgreSQL.
 - **templates/: Contains the HTML templates for the web interface.
